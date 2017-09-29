@@ -48,21 +48,21 @@
     %-------------NEW COMMANDS--------------
     
     \newcommand{\subheading}[4]{
-        \item
+        \item[]
             \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
                 \robotobold{#1} &  #2 \\
                 #3 & \robotothin{#4}\\
             \end{tabular*}
     }
     \newcommand{\suborgheading}[4]{
-        \item
+        \item[]
             \begin{tabulary}{1\textwidth}{LR}
                 \robotobold{#1} &  #2 \\
                 #3 & \robotothin{#4}\\
             \end{tabulary}
     }
     \newcommand{\projectsubheading}[4]{
-        \item
+        \item[]
             \begin{tabulary}{1\textwidth}{LLR}
                 \robotobold{#1 \newline \scriptsize{\robotothin{#4}}}\hfill & #2 & \robotothin{#3} \\
                 
@@ -70,7 +70,7 @@
     }
 
     \newcommand{\resumeitem}[2]{
-        \item \robotomed{#1: } \robotolight{#2}
+        \item[] \robotomed{#1: } \robotolight{#2}
     }
     \newcommand{\startResumeSubHeadingList}{\begin{itemize}[leftmargin=*]}
     \newcommand{\fuckthislist}{\end{itemize}}
