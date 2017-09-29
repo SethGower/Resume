@@ -68,12 +68,12 @@
                 
             \end{tabulary}
     }
-
+    \newcommand\tab[1][3.6cm]{\hspace*{#1}}
     \newcommand{\resumeitem}[2]{
         \item[] \robotomed{#1: } \robotolight{#2}
     }
     \newcommand{\startResumeSubHeadingList}{\begin{itemize}[leftmargin=*]}
-    \newcommand{\fuckthislist}{\end{itemize}}
+    \newcommand{\stopList}{\end{itemize}}
     %\newcommand{\resumeItemsStart}{\begin{itemize}[leftmargin=*]}
     %\newcommand{\endresumeItemList}{\end{itemize}}
     
@@ -96,7 +96,7 @@
             \subheading
                 {Rochester Institute of Technology}{Rochester, NY}
                 {Bachelors of Science in Computer Engineering}{Expected Graduation: May 2022}
-        \fuckthislist
+        \stopList
     %------------------------------------
 
     %--------PROJECTS--------------------
@@ -109,9 +109,9 @@
                 {Bot Fighting}{A bot-fighting game using Java as part of Trilogy project for English class in high school}{April--May 2016}
                 {\href{https://github.com/sethgower/botfighting}{github.com/SethGower/BotFighting}}
             \projectsubheading
-                {Pong}{A re-make of classic game Pong from scratch using Java as final my project for Computer Science in high school}{April--May 2016}
+                {Pong\tab}{A re-make of classic game Pong from scratch using Java as final my project for Computer Science in high school}{April--May 2016}
                 {\href{https://github.com/sethgower/pong}{github.com/SethGower/Pong}}
-        \fuckthislist
+        \stopList
     %----------------------------------
 
     %----------RELATED EXP-------------
@@ -123,7 +123,7 @@
                 Collaborated with other programmers and rest of team in order to
                 program our robot for that year’s competition. For the last two years, we used Java to develop an Android app to run the Robot}{September 2016--February 2017}
 
-        \fuckthislist
+        \stopList
     %---------------------------------
 
     %------UNRELATED EXP--------------
@@ -132,7 +132,7 @@
             \subheading
                 {Summer Camp Counselor}{}
                 {Norfolk Academy Summer Programs\newline Taught third through sixth graders how to program using Tynker}{June--July 2017}
-        \fuckthislist
+        \stopList
     %---------------------------------
 
     %-----------SKILLS----------------
@@ -153,6 +153,6 @@
             \suborgheading
                 {Boy Scouts of America}{Fredericksburg, VA}
                 {The BSA taught me important leadership skills, and how to work well with others.}{September 2009--July 2012}
-        \fuckthislist
+        \stopList
     %---------------------------------
     \end{document}
