@@ -1,0 +1,98 @@
+\documentclass[letterpaper, 11pt]{article}
+    \usepackage{fontspec}
+    \usepackage{latexsym}
+    \usepackage[empty]{fullpage}
+    \usepackage{titlesec}
+    \usepackage{marvosym}
+    \usepackage[usenames,dvipsnames]{color}
+    \usepackage{verbatim}
+    \usepackage{enumitem}
+    \usepackage[pdftex]{hyperref}
+    \usepackage{fancyhdr}
+    \usepackage{tabulary}
+    
+    \hypersetup{
+        colorlinks=false,
+    }
+    
+    \titleformat{\section}{
+      \vspace{-4pt}\robotobold\raggedright\large
+    }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+    
+    \raggedright
+    \raggedbottom
+    
+    %--------------------------------------------------------------
+    %Sets up the various Roboto Fonts
+    \setmainfont[Ligatures=TeX]{Roboto-Regular.ttf}
+    \newfontfamily\robotobold[Ligatures=TeX]{Roboto-Bold.ttf}
+    \newfontfamily\robotomed[Ligatures=TeX]{Roboto-Medium.ttf}
+    \newfontfamily\robotothin[Ligatures=TeX]{Roboto-Thin.ttf}
+    \newfontfamily\robotolight[Ligatures=TeX]{Roboto-Light.ttf}
+    %--------------------------------------------------------------
+    
+    \addtolength{\oddsidemargin}{-0.375in}
+    \addtolength{\evensidemargin}{-0.375in}
+    \addtolength{\textwidth}{1in}
+    \addtolength{\topmargin}{-.5in}
+    \addtolength{\textheight}{1.0in}
+    
+    \pagestyle{fancy}
+    \fancyhf{} % clear all header and footer fields
+    \fancyfoot{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    
+    %-------------NEW COMMANDS--------------
+    
+    \newcommand{\subheading}[4]{
+        \item
+            \begin{tabular*}{.98\textwidth}{l@{\extracolsep{\fill}}r}
+                \robotobold{#1} & #2 \\
+                #3 & \robotothin{#4}
+            \end{tabular*}
+    }
+    \newcommand{\projectsubheading}[4]{
+        \item
+            \begin{tabulary}{.98\textwidth}{LLR}
+                \robotobold{#1 \newline \scriptsize{\robotothin{#4}}}\hfill & #2 & \robotothin{#3} \\
+                
+            \end{tabulary}
+    }
+    \newcommand{\startResumeSubHeadingList}{\begin{itemize}[leftmargin=*]}
+    \newcommand{\fuckthislist}{\end{itemize}}
+    
+    %---------------------------------------
+    
+    
+    \begin{document}
+    
+    %------------HEADER------------------
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \Huge{\robotobold{Seth Gower}} & \robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}\\
+       & \robotolight{\href{https://github.com/sethgower}{github.com/SethGower}} \\
+       & \robotolight{(757) 346-9378} \\
+    \end{tabular*}
+    %------------------------------------
+    
+    \section{Education}
+        \startResumeSubHeadingList
+            \subheading
+                {Rochester Institute of Technology}{Rochester, NY}
+                {Bachelors of Science in Computer Engineering}{Expected Graduation: May 2022}
+        \fuckthislist
+    
+    \section{Projects}
+        \startResumeSubHeadingList
+            \projectsubheading
+                {Shower's Web App}{A Web App that shows occupancy status of the showers in CSH utilizing the present lock sensors }{September 2017--Present}
+                {\href{https://github.com/sethgower/cshshowers}{github.com/SethGower/CSHShowers}}
+            \projectsubheading
+                {Bot Fighting}{A bot-fighting game using LWJGL as part of Trilogy project for English class in high school}{April--May 2016}
+                {\href{https://github.com/sethgower/botfighting}{github.com/SethGower/BotFighting}}
+            \projectsubheading
+                {Pong}{A re-make of classic game Pong from scratch using Java as final my project for Computer Science in high school}{April--May 2016}
+                {\href{https://github.com/sethgower/pong}{github.com/SethGower/Pong}}
+        \fuckthislist
+    
+    \end{document}
