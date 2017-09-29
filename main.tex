@@ -49,8 +49,15 @@
     
     \newcommand{\subheading}[4]{
         \item
-            \begin{tabulary}{.98\textwidth}{LR}
-                \robotobold{#1} & #2 \\
+            \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+                \robotobold{#1} &  #2 \\
+                #3 & \robotothin{#4}\\
+            \end{tabular*}
+    }
+    \newcommand{\suborgheading}[4]{
+        \item
+            \begin{tabulary}{1\textwidth}{LR}
+                \robotobold{#1} &  #2 \\
                 #3 & \robotothin{#4}\\
             \end{tabulary}
     }
@@ -140,10 +147,10 @@
     %-----------ORGANIZATIONS---------
     \section{Organizations}
         \startResumeSubHeadingList
-            \subheading
-                {Computer Science House}{}
-                {Computer Science House (csh.rit.edu) is a Special Interest House at RIT, which promotes learning outside of the classroom and personal growth}{August 2017--Present}
-            \subheading
+            \suborgheading
+                {Computer Science House}{Rochester, NY}
+                {Computer Science House (csh.rit.edu) is a Special Interest House at RIT, which \newline promotes learning outside of the classroom and personal growth}{August 2017--Present}
+            \suborgheading
                 {Boy Scouts of America}{Fredericksburg, VA}
                 {The BSA taught me important leadership skills, and how to work well with others.}{September 2009--July 2012}
         \fuckthislist
