@@ -30,6 +30,7 @@
     \newfontfamily\robotomed[Ligatures=TeX]{Roboto-Medium.ttf}
     \newfontfamily\robotothin[Ligatures=TeX]{Roboto-Thin.ttf}
     \newfontfamily\robotolight[Ligatures=TeX]{Roboto-Light.ttf}
+    \newfontfamily\robotoreg[Ligatures=TeX]{Roboto-Regular.ttf}
     %--------------------------------------------------------------
     
     \addtolength{\oddsidemargin}{-0.375in}
@@ -59,6 +60,10 @@
                 \robotobold{#1 \newline \scriptsize{\robotothin{#4}}}\hfill & #2 & \robotothin{#3} \\
                 
             \end{tabulary}
+    }
+
+    \newcommand{\resumeitem}[2]{
+        \item \robotomed{#1: } \robotoreg{#2}
     }
     \newcommand{\startResumeSubHeadingList}{\begin{itemize}[leftmargin=*]}
     \newcommand{\fuckthislist}{\end{itemize}}
@@ -126,9 +131,9 @@
     %-----------SKILLS----------------
     \section{Skills}
         \begin{itemize}[leftmargin=*]
-            \item {\robotomed{Software:} Java, Python, Git, \LaTeX\xspace}
-            \item {\robotomed{Hardware:} Soldering, Electronic Circuits}
-            \item {\robotomed{Professional:} Public Speaking, Spanish(Semi-Conversational)}
+            {\resumeitem{Software}{Java, Python, C, C++, \LaTeX\xspace}}
+            {\resumeitem{Hardware}{Soldering, Electronic Circuits}}
+            {\resumeitem{Professional}{Public Speaking, Spanish(Semi-Conversational)}}
         \end{itemize}
     %---------------------------------
 
