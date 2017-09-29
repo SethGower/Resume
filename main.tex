@@ -10,6 +10,7 @@
     \usepackage[pdftex]{hyperref}
     \usepackage{fancyhdr}
     \usepackage{tabulary}
+    \usepackage{xspace}
     
     \hypersetup{
         colorlinks=false,
@@ -47,20 +48,22 @@
     
     \newcommand{\subheading}[4]{
         \item
-            \begin{tabular*}{.98\textwidth}{l@{\extracolsep{\fill}}r}
+            \begin{tabulary}{.98\textwidth}{LR}
                 \robotobold{#1} & #2 \\
-                #3 & \robotothin{#4}
-            \end{tabular*}
+                #3 & \robotothin{#4}\\
+            \end{tabulary}
     }
     \newcommand{\projectsubheading}[4]{
         \item
-            \begin{tabulary}{.98\textwidth}{LLR}
+            \begin{tabulary}{1\textwidth}{LLR}
                 \robotobold{#1 \newline \scriptsize{\robotothin{#4}}}\hfill & #2 & \robotothin{#3} \\
                 
             \end{tabulary}
     }
     \newcommand{\startResumeSubHeadingList}{\begin{itemize}[leftmargin=*]}
     \newcommand{\fuckthislist}{\end{itemize}}
+    %\newcommand{\resumeItemsStart}{\begin{itemize}[leftmargin=*]}
+    %\newcommand{\endresumeItemList}{\end{itemize}}
     
     %---------------------------------------
     
@@ -95,4 +98,36 @@
                 {\href{https://github.com/sethgower/pong}{github.com/SethGower/Pong}}
         \fuckthislist
     
+    \section{Related Experience}
+        \startResumeSubHeadingList
+            \subheading
+                {Robotics Team Captain \newline \robotothin{2014-2017}}{}
+                {Programmer\newline
+                Collaborated with other programmers and rest of team in order to
+                program our robot for that year’s competition. For the last two years, we used Java to develop an Android app to run the Robot}{September 2016--February 2017}
+
+        \fuckthislist
+    \section{Work Experience}
+        \startResumeSubHeadingList
+            \subheading
+                {Summer Camp Counselor}{}
+                {Norfolk Academy Summer Programs\newline Taught third through sixth graders how to program using Tynker}{June--July 2017}
+        \fuckthislist
+
+    \section{Skills}
+        \begin{itemize}[leftmargin=*]
+            \item {\robotomed{Software:} Java, Python, Git, \LaTeX\xspace}
+            \item {\robotomed{Hardware:} Soldering, Electronic Circuits}
+            \item {\robotomed{Professional:} Public Speaking, Spanish(Semi-Conversational)}
+        \end{itemize}
+
+    \section{Organizations}
+        \startResumeSubHeadingList
+            \subheading
+                {Computer Science House}{}
+                {Computer Science House (csh.rit.edu) is a Special Interest House at RIT, which promotes learning outside of the classroom and personal growth}{August 2017--Present}
+            \subheading
+                {Boy Scouts of America}{Fredericksburg, VA}
+                {The BSA taught me important leadership skills, and how to work well with others.}{September 2009, July 2012}
+        \fuckthislist
     \end{document}
