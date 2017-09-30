@@ -1,4 +1,4 @@
-\documentclass[letterpaper, 10.5pt]{article}
+\documentclass[letterpaper, 11pt]{article}
     %--------DEPENDENCIES--------    
         \usepackage{fontspec}
         \usepackage{latexsym}
@@ -53,7 +53,7 @@
     
     %--------NEW-COMMANDS-------
         %Creates tab command that tabs the text over the argument amount
-            \newcommand{\tab}[1][1cm]{\hspace*{#1}}
+            \newcommand{\tab}{\hspace*{.35cm}}
         %Accents Subsection Headings and List Item Titles
             \renewcommand{\accent}[1]{\textcolor{Maroon}{\robotobold{#1}}}
         %Resume Subsection-Takes 4 Arguments {Title}{Location}{Description}{Duration}
@@ -93,9 +93,9 @@
             \Huge{\accent{Seth Gower}}
             \normalsize
             \begin{itemize}[leftmargin=*]
-                \item[] \tab{.5cm}\robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}
-                \item[] \tab{.5cm}\robotolight{\href{https://github.com/sethgower}{github.com/SethGower}}
-                \item[] \tab{.5cm}\robotolight{(757) 346-9378}
+                \item[] \tab\robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}
+                \item[] \tab\robotolight{\href{https://github.com/sethgower}{github.com/SethGower}}
+                \item[] \tab\robotolight{(757) 346-9378}
             \end{itemize}
             %\begin{itemize}[leftmargin=*]
             %    \item[] \robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}
@@ -110,7 +110,7 @@
                 \resumeSubHeadingListStart
                     \resumeSubsection
                         {Rochester Institute of Technology}{Rochester, NY}
-                        {Bachelors Degree in Computer Engineering, Which is a 5 Year program}{Expected Graduation of May, 2022}
+                        {Bachelors Degree in Computer Engineering, 5 year program}{Expected Graduation of May, 2022}
                 \resumeSubHeadingListEnd
         %---------------------------
 
