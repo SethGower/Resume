@@ -1,4 +1,4 @@
-\documentclass[letterpaper, 11pt]{article}
+\documentclass[letterpaper, 10.5pt]{article}
     \usepackage{fontspec}
     \usepackage{latexsym}
     \usepackage[empty]{fullpage}
@@ -58,13 +58,13 @@
                 #3 & \robotothin{\mbox{#4}}           
             \end{tabularx}
     }
-    %-Takes 4 arguments {Title}{Duration}{Github}{Description}
-    \newcommand{\project}[4]{
+    %-Takes 4 arguments {Title}{Language}{Github}{Description}
+    \newcommand{\project}[5]{
             \item[]
                 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-                \begin{tabularx}{1\textwidth}{p{1.5in}p{3.5in}R}
-                    \accent{\mbox{#1}} & & \mbox{\robotothin{#2}} \\
-                    \scriptsize\robotothin{#3} & \small #4 \\
+                \begin{tabularx}{1\textwidth}{p{1.8in}p{3.5in}R}
+                    \accent{\mbox{#1}} & &  \mbox{#2}\\
+                    \footnotesize\robotothin{#3} & \small #4 & \mbox{\robotothin{#5}}\\
                 \end{tabularx}
     }
     \newcommand{\resumeItem}[2]{
@@ -81,11 +81,13 @@
     
     \begin{document}
         %------------HEADER---------
-        \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-            \Huge{\robotobold{Seth Gower}} & \robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}\\
-            & \robotolight{\href{https://github.com/sethgower}{github.com/SethGower}} \\
-            & \robotolight{(757) 346-9378} \\
-            \end{tabular*}
+        \Huge{\accent{Seth Gower}}
+        \normalsize\newline
+        \robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}\newline
+        \robotolight{\href{https://github.com/sethgower}{github.com/SethGower}}\newline
+        \robotolight{(757) 346-9378}
+        \newline\newline\robotomed Computer Engineering Major in search of Co-op for Summer 2018
+        
         %---------------------------
 
         %--------EDUCATION----------
@@ -101,14 +103,14 @@
         \section{Projects}
             \resumeSubHeadingListStart
                 \project
-                    {Showers Web App}{September 2017--Present}
-                    {\href{https://github.com/sethgower/CSHshowers}{github.com/SethGower/CSHShowers}}{A Web App that shows occupancy \newline status of the showers in CSH utilizing the present lock sensors}
+                    {Showers Web App}{HTML/CSS/Python}
+                    {\href{https://github.com/sethgower/CSHshowers}{github.com/SethGower/CSHShowers}}{A Web App that shows occupancy \newline status of the showers in CSH utilizing the present lock sensors}{September 2017--Present}
                 \project
-                    {Bot Fighting Game}{April--May 2016}
-                    {\href{https://github.com/sethgower/botfighting}{github.com/SethGower/BotFighting}}{A simple two player game in which each player controls a "robot" and tries to attack the other. Written in Java}
+                    {Bot Fighting Game}{Java}
+                    {\href{https://github.com/sethgower/botfighting}{github.com/SethGower/BotFighting}}{A simple two player game in which each player controls a "robot" and tries to attack the other. Written in Java}{April--May 2016}
                 \project
-                    {Pong}{April--May 2016}
-                    {\href{https://github.com/sethgower/pong}{github.com/SethGower/Pong}}{A simple recreation of the classic game \textit{Pong}. Has both 2 player and (unbeatable) one player. Written in Java}
+                    {Pong}{Java}
+                    {\href{https://github.com/sethgower/pong}{github.com/SethGower/Pong}}{A simple recreation of the classic game \textit{Pong}. Has both 2 player and (unbeatable) one player. Written in Java}{April--May 2016}
             \resumeSubHeadingListEnd
         %---------------------------
 
