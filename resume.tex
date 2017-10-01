@@ -20,7 +20,7 @@
     
     %----SECTION-FORMATTING-----
         \titleformat{\section}{
-        \vspace{-4pt}\robotobold\raggedright\large
+        \vspace{-4pt}\raggedright\large
         }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
     
     
@@ -75,31 +75,28 @@
         %Creates tab command that tabs the text over the argument amount
             \newcommand{\tab}{\hspace*{.35cm}}
         %Accents Subsection Headings and List Item Titles
-            \renewcommand{\accent}[1]{\textcolor{Maroon}{\robotobold{#1}}}
+            \renewcommand{\accent}[1]{\textbf{\textcolor{Maroon}{#1}}}
         %Resume Subsection-Takes 4 Arguments {Title}{Location}{Description}{Duration}
             \newcommand{\resumeSubsection}[4]{
                 \item[]
                     \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
                     \begin{tabularx}{1\textwidth}{p{4.5in}R}
                         \accent{#1} & {\mbox{#2}} \\
-                        \robotolight{#3} & \robotothin{\mbox{#4}}           
+                        \robotoLight{#3} & \robotoThin{\mbox{#4}}           
                     \end{tabularx}
             }
         %Project Items-Takes 4 arguments {Title}{Language}{Github}{Description}
             \newcommand{\project}[5]{
                     \item[]
                         \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-                        \begin{tabularx}{1\textwidth}{p{1.8in}p{3.5in}R}
+                        \begin{tabularx}{1\textwidth}{p{2.1in}p{3.2in}R}
                             \accent{\mbox{#1}} & &  \mbox{#2}\\
-                            \footnotesize\robotothin{#3} & \small\robotolight{#4} & \mbox{\robotothin{#5}}\\
+                            \footnotesize\robotoThin{\href{https://#3}{#3}} & \small\robotoLight{#4} & \mbox{\robotoThin{#5}}\\
                         \end{tabularx}
             }
         %Resume Listed Item-Takes 2 arguments {Title}{Description}
 
-            \newcommand{\resumeItem}[2]{
-                \item[]
-                    \robotobold{\accent{#1}: } \robotolight{#2}
-            }
+            \newcommand{\resumeItem}[2]{\item[] \textbf{#1}: \robotoLight{#2}}
         %Commands for List Environment
             \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
             \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -113,16 +110,11 @@
             \Huge{\accent{Seth Gower}}
             \normalsize
             \begin{itemize}[leftmargin=*]
-                \item[] \tab\robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}
-                \item[] \tab\robotolight{\href{https://github.com/sethgower}{github.com/SethGower}}
-                \item[] \tab\robotolight{(757) 346-9378}
+                \item[] \tab\robotoLight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}
+                \item[] \tab\robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}
+                \item[] \tab\robotoLight{(757) 346-9378}
             \end{itemize}
-            %\begin{itemize}[leftmargin=*]
-            %    \item[] \robotolight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}
-            %    \item[] \robotolight{\href{https://github.com/sethgower}{github.com/SethGower}}
-            %   \item[] \robotolight{(757) 346-9378}
-            %\end{itemize}
-            \robotomed Computer Engineering Major in search of Co-op for Summer 2018 
+            \robotoMed Computer Engineering Major in search of Co-op for Summer 2018 
         %---------------------------
 
         %--------EDUCATION----------
@@ -138,32 +130,14 @@
             \section{Projects}
                 \resumeSubHeadingListStart
                     \project
-                        {Showers Web App}{HTML/CSS/Python}
-                        {\href{https://github.com/sethgower/CSHshowers}{github.com/SethGower/CSHShowers}}{A web app to show the occupancy status of a shower. Utilizing Python, HTML/CSS and SQLAlchemy.}{September 2017--Present}
+                        {Rocket Thrust Calculator}{Python}
+                        {github.com/SethGower/Thrust}{A simple program that calculates the amount of thrust produced for a rocket under certain conditions.}{September 2017}
                     \project
                         {Bot Fighting Game}{Java}
-                        {\href{https://github.com/sethgower/botfighting}{github.com/SethGower/BotFighting}}{A simple game made for a high school project. Written with the Light weight Java game library(LWJGL).}{April--May 2016}
+                        {github.com/SethGower/BotFighting}{A simple game made for a high school project. Written with the Light weight Java game library(LWJGL).}{April--May 2016}
                     \project
                         {Pong}{Java}
-                        {\href{https://github.com/sethgower/pong}{github.com/SethGower/Pong}}{A recreation of the classic game \textit{Pong}. Also written in Java with LWJGL.}{April--May 2016}
-                \resumeSubHeadingListEnd
-        %---------------------------
-
-        %------LEADER-EXP-----------
-            \section{Leadership Experience}
-                \resumeSubHeadingListStart
-                    \resumeSubsection{Robotics Team Captain}{Norfolk, VA}
-                        {Programmer \newline Collaborated with other team members and programmers the program for that year's competition.}{August 2016--February 2017}
-                    \resumeSubsection{Freshman Project Vice President}{Rochester, NY}
-                        {Vice President \newline Collaborated with fellow Executive Board members to help coordinate a large scale charity event benefitting \textit{Doctors Without Borders}}{September--November 2017}
-            \resumeSubHeadingListEnd
-        %---------------------------
-
-        %------WORK-EXP-------------
-            \section{Work Experience}
-                \resumeSubHeadingListStart
-                    \resumeSubsection{Summer Camp Counselor}{Norfolk, VA}
-                    {Norfolk Academy Summer Programs \newline Taught elementary students basics of programming with Tynker}{June--July 2017}
+                        {github.com/SethGower/Pong}{A recreation of the classic game \textit{Pong}. Also written in Java with LWJGL.}{April--May 2016}
                 \resumeSubHeadingListEnd
         %---------------------------
 
@@ -179,8 +153,30 @@
         %-----Organizations---------
             \section{Organizations}
                 \resumeSubHeadingListStart
-                    \resumeItem{Computer Science House}{An organization at RIT that encourages extracurricular learning, through individual projects, collaboration, hands on learning with the server, project, and research rooms, and out of the classroom technical seminars.}
-                    \resumeItem{Boy Scouts of America}{The BSA taught important leadership skills, and how to work well with others.}
+                    \resumeSubsection
+                        {Computer Science House}{Rochester, NY}
+                        {An organization at RIT that encourages extracurricular learning, through individual projects, collaboration, hands on learning with the server, project, and research rooms, and out of the classroom technical seminars.}{August, 2017--Present}
+                    \resumeSubsection
+                        {Boy Scouts of America}{Fredericksburg, VA}
+                        {The BSA taught important leadership skills, and how to work well with others.}{August, 2009--July, 2013}
                 \resumeSubHeadingListEnd
+        %---------------------------
+
+        %------WORK-EXP-------------
+            \section{Work Experience}
+                \resumeSubHeadingListStart
+                    \resumeSubsection{Summer Camp Counselor}{Norfolk, VA}
+                    {\textit{Norfolk Academy Summer Programs} \newline Taught elementary students basics of programming with Tynker}{June--July 2017}
+                \resumeSubHeadingListEnd
+        %---------------------------
+
+        %------LEADER-EXP-----------
+            \section{Leadership Experience}
+                \resumeSubHeadingListStart
+                    \resumeSubsection{Robotics Team Captain}{Norfolk, VA}
+                        {\textit{Programmer} \newline Collaborated with other team members and programmers the program for that year's competition.}{August 2016--February 2017}
+                    \resumeSubsection{Freshman Project}{Rochester, NY}
+                        {\textit{Vice President} \newline Collaborated with fellow Executive Board members to help coordinate a large scale charity event benefitting \textit{Doctors Without Borders}}{September--November 2017}
+            \resumeSubHeadingListEnd
         %---------------------------
     \end{document}
