@@ -1,5 +1,5 @@
 \documentclass[letterpaper, 11pt]{article}
-    %--------DEPENDENCIES--------    
+    %--------DEPENDENCIES--------
         \usepackage{fontspec}
         \usepackage{latexsym}
         \usepackage[empty]{fullpage}
@@ -15,15 +15,15 @@
         \usepackage{xspace}
         \usepackage{enumitem}
     %----------------------------
-    
+
     \hypersetup{colorlinks=false,}
-    
+
     %----SECTION-FORMATTING-----
         \titleformat{\section}{
         \vspace{-4pt}\raggedright\large
         }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-    
-    
+
+
     %---------------------------
 
     %--------FONT-SETUP---------
@@ -54,7 +54,7 @@
             ItalicFont = *-Italic,
         ]{RobotoThin}
     %---------------------------
-    
+
     %----------MARGINS----------
         \addtolength{\oddsidemargin}{-0.375in}
         \addtolength{\evensidemargin}{-0.375in}
@@ -62,7 +62,7 @@
         \addtolength{\topmargin}{-.5in}
         \addtolength{\textheight}{1.0in}
     %---------------------------
-    
+
     %-----HEADER-SETUP---------
         \pagestyle{fancy}
         \fancyhf{} % clear all header and footer fields
@@ -70,7 +70,7 @@
         \renewcommand{\headrulewidth}{0pt}
         \renewcommand{\footrulewidth}{0pt}
     %---------------------------
-    
+
     %--------NEW-COMMANDS-------
         %Creates tab command that tabs the text over the argument amount
             \newcommand{\tab}{\hspace*{.35cm}}
@@ -82,7 +82,7 @@
                     \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
                     \begin{tabularx}{1\textwidth}{p{4.5in}R}
                         \accent{#1} & {\mbox{#2}} \\
-                        \robotoLight{#3} & \robotoThin{\mbox{#4}}           
+                        \robotoLight{#3} & \robotoThin{\mbox{#4}}
                     \end{tabularx}
             }
         %Project Items-Takes 4 arguments {Title}{Language}{Github}{Description}
@@ -100,9 +100,9 @@
             \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
             \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
-    
+
     %---------------------------
-    
+
     \setlist{nosep}
     \begin{document}
         %------------HEADER---------
@@ -113,7 +113,7 @@
                 \item[] \tab\robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}
                 \item[] \tab\robotoLight{(757) 346-9378}
             \end{itemize}
-            \tab\tab\robotoMed Computer Engineering Major in search of Co-op for Summer 2018 
+            \tab\tab\robotoMed Computer Engineering Major in search of Co-op for Summer 2018
         %---------------------------
 
         %--------EDUCATION----------
@@ -129,14 +129,14 @@
             \section{Projects}
                 \resumeSubHeadingListStart
                     \project
-                        {Rocket Thrust Calculator}{Python}
-                        {github.com/SethGower/Thrust}{A simple program that calculates the amount of thrust produced for a rocket under certain conditions.}{September 2017}
-                    \project
                         {Bot Fighting Game}{Java}
                         {github.com/SethGower/BotFighting}{A simple game made for a high school project. Written with the Light weight Java game library(LWJGL).}{April--May 2016}
                     \project
                         {Pong}{Java}
                         {github.com/SethGower/Pong}{A recreation of the classic game \textit{Pong}. Also written in Java with LWJGL.}{April--May 2016}
+                    \project
+                        {Rocket Thrust Calculator}{Python}
+                        {github.com/SethGower/Thrust}{A simple program that calculates the amount of thrust produced for a rocket under certain conditions.}{September 2017}
                 \resumeSubHeadingListEnd
         %---------------------------
 
