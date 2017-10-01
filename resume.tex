@@ -27,32 +27,32 @@
     %---------------------------
 
     %--------FONT-SETUP---------
-    \setmainfont[
-        Path = fonts/,
-        Extension = .ttf,
-        UprightFont = *-Regular,
-        ItalicFont = *-Italic,
-        BoldFont = *-Bold,
-        BoldItalicFont = *-BoldItalic,
-    ]{Roboto}
-    \newfontfamily\robotoLight[
-        Path = fonts/,
-        Extension = .ttf,
-        UprightFont = *-Regular,
-        ItalicFont = *-Italic,
-    ]{RobotoLight}
-    \newfontfamily\robotoMed[
-        Path = fonts/,
-        Extension = .ttf,
-        UprightFont = *-Regular,
-        ItalicFont = *-Italic,
-    ]{RobotoMedium}
-    \newfontfamily\robotoThin[
-        Path = fonts/,
-        Extension = .ttf,
-        UprightFont = *-Regular,
-        ItalicFont = *-Italic,
-    ]{RobotoThin}
+        \setmainfont[
+            Path = fonts/,
+            Extension = .ttf,
+            UprightFont = *-Regular,
+            ItalicFont = *-Italic,
+            BoldFont = *-Bold,
+            BoldItalicFont = *-BoldItalic,
+        ]{Roboto}
+        \newfontfamily\robotoLight[
+            Path = fonts/,
+            Extension = .ttf,
+            UprightFont = *-Regular,
+            ItalicFont = *-Italic,
+        ]{RobotoLight}
+        \newfontfamily\robotoMed[
+            Path = fonts/,
+            Extension = .ttf,
+            UprightFont = *-Regular,
+            ItalicFont = *-Italic,
+        ]{RobotoMedium}
+        \newfontfamily\robotoThin[
+            Path = fonts/,
+            Extension = .ttf,
+            UprightFont = *-Regular,
+            ItalicFont = *-Italic,
+        ]{RobotoThin}
     %---------------------------
     
     %----------MARGINS----------
@@ -95,8 +95,7 @@
                         \end{tabularx}
             }
         %Resume Listed Item-Takes 2 arguments {Title}{Description}
-
-            \newcommand{\resumeItem}[2]{\item[] \textbf{#1}: \robotoLight{#2}}
+            \newcommand{\resumeItem}[2]{\item[]\accent{#1}: \robotoLight{#2}}
         %Commands for List Environment
             \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
             \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -114,7 +113,7 @@
                 \item[] \tab\robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}
                 \item[] \tab\robotoLight{(757) 346-9378}
             \end{itemize}
-            \robotoMed Computer Engineering Major in search of Co-op for Summer 2018 
+            \tab\tab\robotoMed Computer Engineering Major in search of Co-op for Summer 2018 
         %---------------------------
 
         %--------EDUCATION----------
@@ -145,8 +144,12 @@
             \section{Skills}
                 \resumeSubHeadingListStart
                     \resumeItem{Software}{Java, Python, Git, C, C++, \LaTeX\xspace}
+                \resumeSubHeadingListEnd
+                \resumeSubHeadingListStart
                     \resumeItem{Hardware}{Soldering, Prototyping on breadboard}
-                    \resumeItem{Professional}{Public Speaking, Spanish(Semi-conversational)}
+                \resumeSubHeadingListEnd
+                \resumeSubHeadingListStart
+                    \resumeItem{Professional Skills}{Public Speaking, Spanish (Semi Conversational)}
                 \resumeSubHeadingListEnd
         %---------------------------
 
