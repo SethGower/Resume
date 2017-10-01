@@ -27,12 +27,32 @@
     %---------------------------
 
     %--------FONT-SETUP---------
-        \setmainfont[Ligatures=TeX]{Roboto-Light.ttf}
-        \newfontfamily\robotobold[Ligatures=TeX]{Roboto-Bold.ttf}
-        \newfontfamily\robotomed[Ligatures=TeX]{Roboto-Medium.ttf}
-        \newfontfamily\robotothin[Ligatures=TeX]{Roboto-Thin.ttf}
-        \newfontfamily\robotolight[Ligatures=TeX]{Roboto-Light.ttf}
-        \newfontfamily\robotoreg[Ligatures=TeX]{Roboto-Regular.ttf}
+    \setmainfont[
+        Path = fonts/,
+        Extension = .ttf,
+        UprightFont = *-Regular,
+        ItalicFont = *-Italic,
+        BoldFont = *-Bold,
+        BoldItalicFont = *-BoldItalic,
+    ]{Roboto}
+    \newfontfamily\robotoLight[
+        Path = fonts/,
+        Extension = .ttf,
+        UprightFont = *-Regular,
+        ItalicFont = *-Italic,
+    ]{RobotoLight}
+    \newfontfamily\robotoMed[
+        Path = fonts/,
+        Extension = .ttf,
+        UprightFont = *-Regular,
+        ItalicFont = *-Italic,
+    ]{RobotoMedium}
+    \newfontfamily\robotoThin[
+        Path = fonts/,
+        Extension = .ttf,
+        UprightFont = *-Regular,
+        ItalicFont = *-Italic,
+    ]{RobotoThin}
     %---------------------------
     
     %----------MARGINS----------
