@@ -73,7 +73,7 @@
 
     %--------NEW-COMMANDS-------
         %Creates tab command that tabs the text over the argument amount
-            \newcommand{\tab}{\hspace*{.35cm}}
+            \newcommand{\tab}{\hspace*{.3cm}}
         %Accents Subsection Headings and List Item Titles
             \renewcommand{\accent}[1]{\textbf{\textcolor{Maroon}{#1}}}
         %Resume Subsection-Takes 4 Arguments {Title}{Location}{Description}{Duration}
@@ -95,7 +95,7 @@
                         \end{tabularx}
             }
         %Resume Listed Item-Takes 2 arguments {Title}{Description}
-            \newcommand{\resumeItem}[2]{\item[]\accent{#1}: \robotoLight{#2}}
+            \newcommand{\resumeItem}[2]{\item[]\tab{\accent{#1}: \robotoLight{#2}}}
         %Commands for List Environment
             \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
             \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -106,14 +106,13 @@
     \setlist{nosep}
     \begin{document}
         %------------HEADER---------
-            \Huge{\accent{Seth Gower}}
-            \normalsize
-            \begin{itemize}[leftmargin=*]
-                \item[] \tab\robotoLight{\href{mailto:sethgower@mail.rit.edu}{sethgower@mail.rit.edu}}
-                \item[] \tab\robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}
-                \item[] \tab\robotoLight{(757) 346-9378}
-            \end{itemize}
-            \tab\tab\robotoMed Computer Engineering Major in search of Co-op for Summer 2018
+         
+            \hspace{-0.65cm}\huge{\accent{Seth Gower}}
+            \normalsize\newline
+            \robotoLight{\href{mailto:sethzerish@gmail.com}{sethzerish@gmail.com}}\newline
+            \robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}\newline
+            \robotoLight{(757) 553-0576}\newline
+            \robotoMed Computer Engineering Major in search of Co-op for Summer 2018
         %---------------------------
 
         %--------EDUCATION----------
@@ -130,7 +129,7 @@
                 \resumeSubHeadingListStart
                     \project
                         {Bot Fighting Game}{Java}
-                        {github.com/SethGower/BotFighting}{A simple game made for a high school project. Written with the Light weight Java game library(LWJGL).}{April--May 2016}
+                        {github.com/SethGower/BotFighting}{A simple 2 player robot fighting game. Written with the Light weight Java game library(LWJGL).}{April--May 2016}
                     \project
                         {Pong}{Java}
                         {github.com/SethGower/Pong}{A recreation of the classic game \textit{Pong}. Also written in Java with LWJGL.}{April--May 2016}
@@ -144,11 +143,7 @@
             \section{Skills}
                 \resumeSubHeadingListStart
                     \resumeItem{Software}{Java, Python, Git, C, C++, \LaTeX\xspace}
-                \resumeSubHeadingListEnd
-                \resumeSubHeadingListStart
                     \resumeItem{Hardware}{Soldering, Prototyping on breadboard}
-                \resumeSubHeadingListEnd
-                \resumeSubHeadingListStart
                     \resumeItem{Professional Skills}{Public Speaking, Spanish (Semi Conversational)}
                 \resumeSubHeadingListEnd
         %---------------------------
