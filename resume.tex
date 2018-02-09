@@ -81,8 +81,8 @@
                 \item[]
                     \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
                     \begin{tabularx}{1\textwidth}{p{4.5in}R}
-                        \accent{#2}\hspace{.25cm}\footnotesize\robotoThin{\href{https://#1}{#1}} & {\mbox{#3}} \\
-                        \robotoLight{#4} & \robotoThin{\mbox{#5}}
+                        \accent{#2}\hspace{.25cm}\footnotesize\robotoLight{\href{https://#1}{#1}} & {\mbox{{#3}}} \\
+                        \small\robotoLight{#4} & \robotoLight{\mbox{#5}}
                     \end{tabularx}
             }
         %Project Items-Takes 4 arguments {Title}{Language}{Github}{Description}
@@ -109,10 +109,10 @@
 
             \hspace{-0.65cm}\huge{\accent{Seth Gower}}
             \normalsize\newline
-            \robotoLight{\href{http://sethgower.com}{sethgower.com}}\newline
             \robotoLight{\href{mailto:seth@sethgower.com}{seth@sethgower.com}}\newline
             \robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}\newline
-            \robotoMed Computer Engineering Major in search of co-op for Summer 2018
+            \robotoLight{\href{http://sethgower.com}{sethgower.com}}\newline
+            \robotoMed Looking for Co-op for Summer 2018
         %---------------------------
 
         %--------EDUCATION----------
@@ -120,46 +120,37 @@
                 \resumeSubHeadingListStart
                     \resumeSubsection
                         {Rochester Institute of Technology}{Rochester, NY}
-                        {Bachelors Degree in Computer Engineering, 5 year program\newline
-                        Minor in Computer Security}{Expected Graduation of May, 2022}
+                        {B.S Computer Engineering, 5 year program\newline
+                        Minor in Computer Security}{Expected Graduation of May 2022}
                 \resumeSubHeadingListEnd
         %---------------------------
-
-        %-------PROJECTS------------
-            \section{Projects}
-                \resumeSubHeadingListStart
-                    \project
-                        {SUDS}{Hardware}
-                        {github.com/SethGower/SUDS}{24 Hour Hackathon Project. The Shower Use Detection System for CSH. Uses Limit switches on shower doors to close circuit and light up LED and send input to Raspbery Pi GPIO pin. Will later implement webapp.}{October 27, 2017}
-                    \project
-                        {GOLD}{Hardware, Arduino}
-                        {github.com/SethGower/RGB-LED-API}{An IoT project that I am working on that will enable the user to control an LED strip using the Google Assistant. Currently an Arduino receives commands via HTTP requests and changes the color of the strip.}{November, 2017 - Present}
-                    \project
-                        {My Personal Blog}{Jekyll}
-                        {github.com/SethGower/personal-blog}{This is my personal blog where I put posts about projects that I do. I also will put tutorials for interesting things that I learn that I feel other's might want to learn}{November 2017}
-                    \resumeSubHeadingListEnd
-        %---------------------------
-
-        %------SKILLS---------------
+	
+		%------SKILLS---------------
             \section{Skills}
                 \resumeSubHeadingListStart
-                    \resumeItem{Software}{Java, Python, Git, C, C++, \LaTeX\xspace, KiCad, Microsoft Office Suite}
+                    \resumeItem{Languages}{Java, Python, C, C++, \LaTeX\xspace}
+					\resumeItem{Tools}{Git, KiCad, Altera Quartus II, ModelSim}
                     \resumeItem{Hardware}{Soldering, Prototyping on breadboard}
                     \resumeItem{Professional Skills}{Public Speaking, Spanish (Semi Conversational)}
                 \resumeSubHeadingListEnd
         %---------------------------
 
-        %-----Organizations---------
-            \section{Organizations}
-                \resumeSubHeadingListStart
-                    \resumeSubsection[csh.rit.edu]
-                        {Computer Science House}{Rochester, NY}
-                        {An organization at RIT that encourages extracurricular learning, through individual projects, collaboration, and hands on learning.}{August, 2017--Present}
-                    \resumeSubsection[ehouse.rit.edu]
-                        {Engineering House}{Rochester, NY}
-                    	{Engineering House (eHouse) is a social floor with an academic interest, where like-minded people (mostly engineers) gather to learn and socialize. eHouse is also project based, completing multiple Imagine RIT displays.}{October 2017 -- Present}
-					\resumeSubHeadingListEnd
 
+        %-------PROJECTS------------
+            \section{Projects}
+                \resumeSubHeadingListStart
+                    \resumeSubsection[github.com/SethGower/SUDS]
+                        {SUDS}{Hardware}
+                        {24 Hour Hackathon Project. The Shower Use Detection System for my dorm floor, showing the occupancy status of the showers. Uses Limit switches on shower doors to close circuit and light up LED and send input to Raspbery Pi GPIO pin. Will later implement webapp.}{October 2017}
+					\vspace{.1cm}
+                    \resumeSubsection[github.com/SethGower/RGB-LED-API]
+                        {GOLD}{Hardware, Arduino}
+                        {An IoT project that enables the user to control an LED strip using the Google Assistant. Currently an Arduino receives commands via HTTP requests and changes the color of the strip.}{November 2017 - Present}
+                    \vspace{.1cm}
+					\resumeSubsection[github.com/SethGower/personal-blog]
+                        {My Personal Blog}{Jekyll}
+                        {My personal blog, that I self host on my server and build with Jekyll, a static website generator based on Ruby. When I complete a project, or learn something new, I may post it here.}{November 2017}
+                    \resumeSubHeadingListEnd
         %---------------------------
 
         %------WORK-EXP-------------
@@ -179,4 +170,19 @@
                         {\textit{Programmer} \newline Collaborated with other team members and programmers on the program for that year's competition. We finished 5th in the state.}{August 2016--February 2017}
                     \resumeSubHeadingListEnd
         %---------------------------
+		
+		%-----Organizations---------
+            \section{Organizations}
+                \resumeSubHeadingListStart
+                    \resumeSubsection[csh.rit.edu]
+                        {Computer Science House}{Rochester, NY}
+                        {Computer Science House is an organization at RIT that encourages extracurricular learning, through individual projects, collaboration, and hands on learning.}{August 2017--Present}
+                    \resumeSubsection[ehouse.rit.edu]
+                        {Engineering House}{Rochester, NY}
+                    	{Engineering House is a social floor with an academic interest, where like-minded people gather to learn and socialize. eHouse is also project based, completing multiple Imagine RIT displays.}{October 2017 -- Present}
+					\resumeSubHeadingListEnd
+
+        %---------------------------
+
+
     \end{document}
