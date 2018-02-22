@@ -9,7 +9,6 @@
         \usepackage{verbatim}
         \usepackage{enumitem}
         \usepackage{hyperref}
-        \usepackage{fancyhdr}
         \usepackage{tabulary}
         \usepackage{tabularx}
         \usepackage{xspace}
@@ -64,11 +63,11 @@
     %---------------------------
 
     %-----HEADER-SETUP---------
-        \pagestyle{fancy}
-        \fancyhf{} % clear all header and footer fields
-        \fancyfoot{}
-        \renewcommand{\headrulewidth}{0pt}
-        \renewcommand{\footrulewidth}{0pt}
+        %\pagestyle{fancy}
+        %\fancyhf{} % clear all header and footer fields
+        %\fancyfoot{}
+        %\renewcommand{\headrulewidth}{0pt}
+        %\renewcommand{\footrulewidth}{0pt}
     %---------------------------
 
     %--------NEW-COMMANDS-------
@@ -128,7 +127,7 @@
 		%------SKILLS---------------
             \section{Skills}
                 \resumeSubHeadingListStart
-                    \resumeItem{Languages}{Java, Python, C, C++, \LaTeX\xspace}
+                    \resumeItem{Languages}{Java, Python, Arduino C, \LaTeX\xspace}
 					\resumeItem{Tools}{Git, KiCad, Altera Quartus II, ModelSim, Jekyll}
                     \resumeItem{Hardware}{Soldering, Prototyping on breadboard}
                     \resumeItem{Professional Skills}{Public Speaking, Spanish (Semi Conversational)}
@@ -147,12 +146,15 @@
                         {GOLD}{Hardware, Arduino}
                         {An IoT project that enables the user to control an LED strip using the Google Assistant. Currently an Arduino receives commands via HTTP requests and changes the color of the strip.}{November 2017--Present}
                     \vspace{.1cm}
-					\resumeSubsection[github.com/SethGower/personal-blog]
-                        {My Personal Blog}{Jekyll}
-                        {My personal blog, that I self host on my server and build with Jekyll, a static website generator based on Ruby. When I complete a project, or learn something new, I may post it here.}{November 2017}
+					\resumeSubsection[github.com/news-aggregator/news\_aggregator]
+						{NewsMap}{Python, Flask, SQLAlchemy}
+						{A News Aggregator created as a Hackathon project at DandyHacks 2018. Scrapes news from the internet using RSS and Twitter feeds. Places news on a map to show the dispersion of news.}{February 2018}
+					%\resumeSubsection[github.com/SethGower/personal-blog]
+                    %    {My Personal Blog}{Jekyll}
+                    %    {My personal blog, that I self host on my server and build with Jekyll, a static website generator based on Ruby. When I complete a project, or learn something new, I may post it here.}{November 2017}
                     \resumeSubHeadingListEnd
         %---------------------------
-
+					
         %------WORK-EXP-------------
             \section{Work Experience}
                 \resumeSubHeadingListStart
@@ -179,7 +181,7 @@
                         {Computer Science House is an organization at RIT that encourages extracurricular learning, through individual projects, collaboration, and hands on learning.}{August 2017--Present}
                     \resumeSubsection[ehouse.rit.edu]
                         {Engineering House}{Rochester, NY}
-                    	{Engineering House is a social floor with an academic interest, where like-minded people gather to learn and socialize. eHouse is also project based, completing multiple Imagine RIT displays.}{October 2017--Present}
+                    	{Engineering House is a social floor with an academic interest, where like-minded people gather to learn and socialize. Engineering House is also project based, completing multiple Imagine RIT displays.}{October 2017--Present}
 					\resumeSubHeadingListEnd
 
         %---------------------------
