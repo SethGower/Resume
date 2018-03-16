@@ -5,5 +5,5 @@
 *.out
 *.gz
 *.pdf
-
+*.xdv
 coverletters
