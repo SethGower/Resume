@@ -2,18 +2,22 @@ This is my personal Resume written in LaTeX.
 
 ### Usage
 
-To compile this yourself, you must have `textlive` installed(for linux). You can install this by running the following command. 
-**Ubuntu and Debian**:
-```
-sudo apt -y install texlive-full
-```
-**Fedora**:
-```
-sudo dnf install texlive-scheme-full
+In order to edit this document for your own use, you must have `texlive` installed. 
+
+###### Ubuntu
+```bash
+sudo apt install texlive-full
 ```
 
-Once texlive is installed. You need to use `xelatex` to compile.
+###### Fedora
+```bash
+sudp dnf install texlive-full
 ```
-xelatex resume.tex
-``` 
-This will output the pdf to `resume.pdf` in the same working directory. If you would like to output to another working directory, use the `-output-directory=DIR` flag, where `DIR` is the directory to which you want to output. 
+
+###### Arch
+```bash
+sudo pacman -S texlive-core texlive-fontsextra
+```
+
+I personally use [Vimtex](https://github.com/lervag/vimtex) which uses Latexmk for compilation. In order to use latexmk, you must pass in the `--xelatex` option. Otherwise, you can compile with just `xelatex SethGower.tex`. 
+
