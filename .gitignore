@@ -4,6 +4,5 @@
 *.log
 *.out
 *.gz
-*.pdf
 *.xdv
 coverletters
