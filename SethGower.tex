@@ -21,7 +21,7 @@
     %----SECTION-FORMATTING-----
         \titleformat{\section}{
         \vspace{-10pt}\raggedright\large
-        }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+        }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 
     %---------------------------
@@ -63,39 +63,31 @@
         \addtolength{\textheight}{1.0in}
     %---------------------------
 
-    %-----HEADER-SETUP---------
-        %\pagestyle{fancy}
-        %\fancyhf{} % clear all header and footer fields
-        %\fancyfoot{}
-        %\renewcommand{\headrulewidth}{0pt}
-        %\renewcommand{\footrulewidth}{0pt}
-    %---------------------------
-
     %--------NEW-COMMANDS-------
         %Creates tab command that tabs the text over the argument amount
             \newcommand{\tab}{\hspace*{.3cm}}
         %Accents Subsection Headings and List Item Titles
             \renewcommand{\accent}[1]{\textbf{\textcolor{MidnightBlue}{#1}}}
+        % Column Type for Ragged Left
+            \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
         %Resume Subsection-Takes 5 Arguments [optional:link]{Title}{Location}{Description}{Duration}
             \newcommand{\resumeSubsection}[5][]{
                 \item[]
-                    \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
                     \begin{tabularx}{1\textwidth}{p{5.5in}R}
-                        \accent{#2}\hspace{.25cm}\footnotesize\robotoLight{\href{https://#1}{#1}} & {\mbox{{#3}}} \\
+                        \accent{#2}\hspace{.25cm}\footnotesize\robotoLight{\href{https://#1}{#1}} & \mbox{#3} \\
                         \small\robotoLight{#4} & \robotoLight{\mbox{#5}}
                     \end{tabularx}
             }
         %Project Items-Takes 4 arguments {Title}{Language}{github}{Description}
             \newcommand{\project}[5]{
                     \item[]
-                        \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
                         \begin{tabularx}{1\textwidth}{p{2.1in}p{3.2in}R}
                             \accent{\mbox{#1}} & &  \mbox{#2}\\
                             \footnotesize\robotoThin{\href{https://#3}{#3}} & \small\robotoLight{#4} & \mbox{\robotoThin{#5}}\\
                         \end{tabularx}
             }
         %Resume Listed Item-Takes 2 arguments {Title}{Description}
-            \newcommand{\resumeItem}[2]{\item[]\tab{\accent{#1}: \robotoLight{#2}}}
+            \newcommand{\resumeItem}[2]{\item{\accent{#1}: \robotoLight{#2}}}
         %Commands for List Environment
             \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
             \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -113,7 +105,7 @@
             \robotoLight{\href{https://sethgower.com}{sethgower.com}}\newline
             (757)553-0576\newline
             \robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}\newline
-            \robotoMed Seeking Software/Hardware Engineering Coop, with
+            \robotoMed\ Seeking Software/Hardware Engineering Coop, with
             Embedded systems for Spring-Summer 2021
         %---------------------------
 
@@ -123,20 +115,20 @@
                     \resumeSubsection
                         {Rochester Institute of Technology}{Rochester, NY}
                         {Bachelor of Science: Computer Engineering, 5 year
-                        program\newline GPA: 3.04 --
+                        program\newline GPA: 3.04 -
                     \href{https://meritpages.com/sethgower}{Dean's List Spring
                 '19}\newline Relevant Coursework: 
                 \begin{itemize}
-                    \item \accent{Reconfigurable Computing (CMPE-660)} - Made
+                    \resumeItem {Reconfigurable Computing (CMPE-660)}{Made
                         complex synchronous designs on Nexys 4 DDR FPGA board.
-                        In Progress.
-                    \item \accent{Interfacing Digital Electronics (CMPE-460)} -
-                        Used FRDM-K64 ARM board to interface with peripherals,
+                        In Progress.}
+                    \resumeItem {Interfacing Digital Electronics (CMPE-460)}
+                        {Used FRDM-K64 ARM board to interface with peripherals,
                         to eventually build and program an autonomous race car.
-                        In Progress. 
-                    \item \accent{Digital Signal Processing (CMPE-480)} - Studied
+                        In Progress.} 
+                    \resumeItem {Digital Signal Processing (CMPE-480)}{Studied
                         mathematical analysis of digital signals, and how to
-                        represent. In Progress. 
+                        represent. In Progress.} 
                 \end{itemize}}{Expected May '22}
                 \resumeSubHeadingListEnd
         %---------------------------
@@ -164,9 +156,8 @@
                         {Created each stage of a MIPS processor, individually
                         tested these stages. The processor was modeled and
                         tested using VHDL and then implemented on to Basys 3 
-                        FPGA. Once complete, the processor will be used to
-                        calculate a portion of the Fibonacci
-                        sequence}{January-May '19}
+                        FPGA. The processor was tested by calculating 10
+                        elements of the Fibonacci Sequence.}{January-May '19}
                     % \resumeSubsection
                     %     {Personal Homelab}{Server Hardware}
                     %     {For the last five years, I have maintained a personal
