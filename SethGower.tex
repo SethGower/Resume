@@ -14,6 +14,11 @@
         \usepackage{tabularx}
         \usepackage{xspace}
         \usepackage{enumitem}
+        \usepackage{amsmath}
+        \usepackage{multirow}
+        \usepackage[T1]{fontenc}
+        \usepackage[utf8]{inputenc}
+        \usepackage{amssymb}
     %----------------------------
 
     \hypersetup{colorlinks=false,}
@@ -69,11 +74,12 @@
         %Accents Subsection Headings and List Item Titles
             \renewcommand{\accent}[1]{\textbf{\textcolor{MidnightBlue}{#1}}}
         % Column Type for Ragged Left
-            \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+            \newcolumntype{L}{>{\raggedleft\arraybackslash}X}
+            \newcolumntype{R}{>{\raggedright\arraybackslash}X}
         %Resume Subsection-Takes 5 Arguments [optional:link]{Title}{Location}{Description}{Duration}
             \newcommand{\resumeSubsection}[5][]{
                 \item[]
-                    \begin{tabularx}{1\textwidth}{p{5.5in}R}
+                    \begin{tabularx}{1\textwidth}{p{5.5in}L}
                         \accent{#2}\hspace{.25cm}\footnotesize\robotoLight{\href{https://#1}{#1}} & \mbox{#3} \\
                         \small\robotoLight{#4} & \robotoLight{\mbox{#5}}
                     \end{tabularx}
@@ -81,7 +87,7 @@
         %Project Items-Takes 4 arguments {Title}{Language}{github}{Description}
             \newcommand{\project}[5]{
                     \item[]
-                        \begin{tabularx}{1\textwidth}{p{2.1in}p{3.2in}R}
+                        \begin{tabularx}{1\textwidth}{p{2.1in}p{3.2in}L}
                             \accent{\mbox{#1}} & &  \mbox{#2}\\
                             \footnotesize\robotoThin{\href{https://#3}{#3}} & \small\robotoLight{#4} & \mbox{\robotoThin{#5}}\\
                         \end{tabularx}
@@ -99,16 +105,59 @@
     \begin{document}
         %------------HEADER---------
 
-            \hspace{-0.65cm}\huge{\accent{Seth Gower}}
-            \normalsize\newline
-            \robotoLight{\href{mailto:sdg7234@rit.edu}{sdg7234@rit.edu}}\newline
-            \robotoLight{\href{https://sethgower.com}{sethgower.com}}\newline
-            (757)553-0576\newline
-            \robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}}\newline
-            \robotoMed\ Seeking Software/Hardware Engineering Coop, with
-            Embedded systems for Spring-Summer 2021
+            \vspace{-0.5in}
+            \begin{center}
+                \begin{tabularx}{0.5\textwidth}{lRL}
+                    \multirow{2}{*}{\hspace{-5.0cm}\huge{\accent{Seth Gower}}} &
+                    \robotoLight{\href{mailto:sdg7234@rit.edu}{sdg7234@rit.edu}}
+                                                                               &
+                                                                               \robotoLight{(757)553-0576}\\
+                                    &\robotoLight{\href{https://github.com/sethgower}{github.com/SethGower}} &
+            \robotoLight{\href{https://sethgower.com}{sethgower.com}} \\
+            \end{tabularx}
+            \end{center}
+
+            \robotoMed\ Seeking Embedded Software Development or Hardware Design
+            Coop for Spring/Summer 2021.
         %---------------------------
 
+        %------WORK-EXP-------------
+            \section{Work Experience}
+                \resumeSubHeadingListStart
+                \resumeSubsection{\href{https://d3engineering.com}{D3
+                    Engineering}: Software Engineer}{Rochester, NY} {Software
+                    Engineering technician at D3 Engineering,
+                            where I primarily worked with Embedded Linux and C
+                            development on Texas Instruments' TDA line of
+                            processors, for automotive vision applications. I
+                            managed the team for the development and execution
+                            of testing for the latest product.  While working at
+                            D3, I was exposed to embedded software development
+                            on a large code base. I worked on both embedded
+                            Linux development, and embedded BIOS development on
+                            remote cores of a processor. I was able to hone and
+                            expand my skills in working as part of a development
+                            team.  Demonstrated ability to efficiently work from
+                            home, due to COVID-19 Pandemic}{January --- July '20}
+                    \resumeSubsection{\href{https://idtech.com}{iD Tech Camps}:
+                        Lead Instructor}{Multiple Locations} {\textit{iD Tech
+                            Camps: William and Mary, PayPal Timonium, and American University} \newline 
+                            Taught a variety of camps during two years at iD
+                            Tech camps.  In addition to teaching, my second year
+                            I was promoted to Lead Instructor. As Lead, I was in
+                            charge of the other instructors, and responsible for
+                            parent interaction if need be, and administering
+                            medicine to students. This position gave me valuable
+                            experience in team/personnel management.
+                        }{June-August '18, '19} 
+                    \resumeSubsection{\href{https://www.rit.edu/engineering/department-computer-engineering}{RIT
+                    CE Department}: Teaching Assistant}{Rochester, NY}
+                        {\textit{RIT Computer Engineering Department}\newline
+                            Assisted in Lab for a variety of classes over the
+                            course of 3 years. Taught concepts to students, and
+                            helped students debug, problems.}{August '18-Present}
+                \resumeSubHeadingListEnd
+        %---------------------------
         %--------EDUCATION----------
             \section{Education}
                 \resumeSubHeadingListStart
@@ -129,6 +178,10 @@
                     \resumeItem {Digital Signal Processing (CMPE-480)}{Studied
                         mathematical analysis of digital signals, and how to
                         represent. In Progress.} 
+                    \resumeItem {Intro to Software Engineering
+                        (SWEN-261)}{Developed and practiced the ability to work
+                        in a team with other software developers, in an Agile
+                        work environment.} 
                 \end{itemize}}{Expected May '22}
                 \resumeSubHeadingListEnd
         %---------------------------
@@ -163,9 +216,9 @@
                     %     {For the last five years, I have maintained a personal
                     %     homelab of server hardware. This homelab is used to
                     %     learn about various server hardware and services, including
-                    %     Proxmox, Docker and PFSense}{July 2017 - Present}
+                    %     Proxmox, Docker and PFSense.}{July 2017 - Present}
 
-                    % \resumeSubsection[github.com/SethGower/haC64]
+                        % \resumeSubsection[github.com/SethGower/haC64]}
                     %     {haC64}{VHDL}
                     %     {BrickHack V project. Myself and a partner worked to
                     %     emulate the Commodore 64's processor, the 6510. This
@@ -175,51 +228,30 @@
                     \resumeSubHeadingListEnd
         %---------------------------
 					
-        %------WORK-EXP-------------
-            \section{Work Experience}
-                \resumeSubHeadingListStart
-                    \resumeSubsection{D3 Engineering: Software Engineer}{Rochester, NY}
-                        {Software Engineering technician at D3 Engineering, where
-                        I primarily worked with Embedded Linux and C development
-                        on Texas Instruments' TDA line of processors, for
-                        automotive vision applications. I also led the design
-                        and execution of the testing framework for the latest
-                        line of products (TDA4 Board). While working with these
-                        products, I gained experience working with I2C, Linux
-                        Device Tree modification, and other skills.}{January '20
-                        - July '20}
-                    % \resumeSubsection{iD Tech Camps: Lead Instructor}{Multiple Locations}
-                    %     {\textit{iD Tech Camps: William and Mary, PayPal Timonium
-                    %     and American University} \newline Taught multiple courses
-                    %     to campers ranging from ages 7--17. Taught Java and Python
-                    %     coding, basic Linux and circuitry on Raspberry Pi and
-                    %     Robotics. Additionally taugh various encryption methods 
-                    %     with Python}{June-August '18, '19} 
-                    \resumeSubsection{Teaching Assistant}{Rochester, NY}
-                        {\textit{RIT Computer Engineering Department}\newline
-                        Assisted in Lab for a variety of classes over the course
-                        of 3 years. Taught concepts to students, and helped 
-                        students debug, problems.}{August '18-Present}
-                \resumeSubHeadingListEnd
-        %---------------------------
 		
 		%-----Organizations---------
             \section{Organizations}
                 \resumeSubHeadingListStart
-                    \resumeSubsection[ehouse.rit.edu]
-                        {Engineering House}{Rochester, NY}
-                        {\textit{Positions Held: Secretary}\newline Engineering
-                        House is a social floor with an academic interest.
-                        EHouse is a place where students gather to learn and
-                        socialize through project based learning and mentor-mentee
-                        relationships. Active Member October '17 - May '19}{October '17--Present}
-                    \resumeSubsection[csh.rit.edu]
-                        {Computer Science House}{Rochester, NY}{Computer
-                        Science House is a Special Interest House at RIT, that
-                        focuses on working on projects and improving learning and
-                        college life by surrounding members with like-minded
-                        people. Active Member from August '17 - May '18.}
-                        {August '17--Present}
+                \resumeItem{Engineering House}{Special Interest House at RIT.
+                Positions Held: Secretary. Active October '17 - May '19}
+                \resumeItem{Computer Science House}{Special Interest House at
+                RIT. Active August '17 - May '18}
+                \resumeItem{CodeRIT}{RIT's Hackathon Club. I assisted in
+                planning BrickHack 2019}
+                    % \resumeSubsection[ehouse.rit.edu]
+                    %     {Engineering House}{Rochester, NY}
+                    %     {\textit{Positions Held: Secretary}\newline Engineering
+                    %     House is a social floor with an academic interest.
+                    %     EHouse is a place where students gather to learn and
+                    %     socialize through project based learning and mentor-mentee
+                    %     relationships. Active Member October '17 - May '19}{October '17--Present}
+                    % \resumeSubsection[csh.rit.edu]
+                    %     {Computer Science House}{Rochester, NY}{Computer
+                    %     Science House is a Special Interest House at RIT, that
+                    %     focuses on working on projects and improving learning and
+                    %     college life by surrounding members with like-minded
+                    %     people. Active Member from August '17 - May '18.}
+                    %     {August '17--Present}
 				\resumeSubHeadingListEnd
         %---------------------------
     \end{document}
