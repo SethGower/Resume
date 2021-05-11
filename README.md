@@ -11,7 +11,7 @@ sudo apt install texlive-full
 
 ###### Fedora
 ```bash
-sudp dnf install texlive-full
+sudo dnf install texlive-full
 ```
 
 ###### Arch
