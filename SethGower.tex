@@ -120,8 +120,8 @@
                 \href{https://sethgower.com}{sethgower.com}
               \end{minipage}
             \end{center}
-            \robotoMed\ Seeking Full Time employment for Digital Hardware
-            Design. Starting June 2022.
+            \robotoMed\ Seeking full time employment developing VHDL for FPGA
+            designs, Starting June 2022.
         %---------------------------
 
         %------WORK-EXP-------------
@@ -134,16 +134,15 @@
                   \begin{itemize}
                     \item Developed high performance VHDL designs on FPGA based
                       SDRs.
-                    \item Development of High Speed Interfaces for SDR
-                      applications, including 40GbE.
-                    \item Develop applications in a fast paced environment,
-                      while meeting deadlines on products for customers.
-                    \item Use of Matlab for thorough verification of complex
-                      VHDL designs.
-                    \item Developed FPGA designs in which multiple, asynchronous
-                      clock domains were present.
+                    \item Worked with High Speed Interfaces for SDR applications,
+                      including 40GbE.
+                    \item Performed well in a fast paced environment, while
+                      meeting deadlines on products for customers.
+                    \item Validated VHDL designs using Matlab and ModelSim.
+                    \item Developed FPGA designs with multiple, asynchronous
+                      clock domains.
                   \end{itemize}
-                }{February '21 - Present}
+                }{Feb. '21 - Present}
                 \vspace{-0.5cm}
 
                 \resumeSubsection{\href{https://d3engineering.com}{D3
@@ -160,7 +159,7 @@
                     \item Demonstrated ability to productively work in a remote
                       capacity due to the COVID-19 pandemic.
                   \end{itemize}
-                }{January - July '20}
+                }{Jan. - Jul. '20}
                 \vspace{-0.5cm}
 
                 % \resumeSubsection{\href{https://idtech.com}{iD Tech Camps}:
@@ -187,7 +186,7 @@
                         concepts.
                       \item Promptly graded student work, on top of course load.
                     \end{itemize}
-                }{August '18-December '20}
+                }{Aug. '18 - Dec. '20}
                 \vspace{-0.7cm}
                 \resumeSubHeadingListEnd
         %---------------------------
@@ -196,18 +195,19 @@
                 \resumeSubHeadingListStart
                     \resumeSubsection
                         {Rochester Institute of Technology}{Rochester, NY}
-                        {Bachelor of Science: Computer Engineering, 5 year
-                        program\newline GPA: 3.11 -
+                        {Bachelor of Science: Computer Engineering \newline
+                        GPA: 3.11 -
                     \href{https://meritpages.com/sethgower}{Dean's List}: Spring
                 '19, Fall '20
                 \newline Relevant Coursework:
                 \begin{itemize}
-                    \resumeItem {Reconfigurable Computing (CMPE-660)}{Learned
-                    Advanced Synchronous Digital Design concepts targeting a
-                    Xilinx Nexys A7 (Previously Nexys 4 DDR) development board.}
-                    \resumeItem {Interfacing Digital Electronics (CMPE-460)}
-                        {Used FRDM-K64 ARM board to interface with peripherals,
-                        to eventually build and program an autonomous race car.}
+                    \resumeItem{Reconfigurable Computing (CMPE-660)}{Learned
+                      Advanced Synchronous Digital Design concepts targeting a
+                      Xilinx Artix-7 using Xilinx Vivado Suite. Designed
+                      Asynchronous interfaces, including PS/2 and UART.}
+                    \resumeItem{Interfacing Digital Electronics (CMPE-460)}
+                      {Used ARM Cortex-M4 board to interface with peripherals,
+                      to build and program an autonomous race car.}
                     % \resumeItem {Digital Signal Processing (CMPE-480)}{Studied
                     %     mathematical analysis of digital signals, and how to
                     %     represent.}
@@ -227,8 +227,8 @@
                     \LaTeX\xspace, Bash, C++, Qt5, Java, Rust}
                     \resumeItem{Tools}{GNU/Linux tools and environment, Git,
                     KiCad, Altera Quartus Suite, ModelSim, Xilinx Vivado}
-                    \resumeItem{Hardware}{Soldering, Prototyping on
-                    breadboard, Hardware design on FPGA, Hardware Debugging}
+                    \resumeItem{Hardware}{FPGA Design targeting Artix-7 and
+                    Stratix-10. Clock Domain crossing.}
                     \resumeItem{Professional Skills}{Public Speaking, Team
                     Management, Ability to Work productively in a remote
                     capacity}
@@ -240,20 +240,49 @@
             \section{Projects}
                 \resumeSubHeadingListStart
                     \resumeSubsection
-                        {Small Scale Autonomous Race Car}{Embedded C}{Using a
-                          NXP/Freescale FRDM-K64 Embedded Development board,
-                          myself and a partner assembled and programmed an
-                          autonomous race car to compete in RIT's IDE Cup. Used
-                          embedded C to design to interface with a line scan
-                          camera to control motors and servos to quickly
-                        traverse a randomly designed track. }{August - December '20}
+                      {Pipelined MIPS Processor}{VHDL}
+                      {
+                        \vspace{-0.3cm}
+                        \begin{itemize}
+                          \item Created and tested each stage of a MIPS
+                            processor
+                          \item Combined each stage in the pipeline, targeting
+                            Xilinx Artix-7.
+                          \item Tested overall functionality by calculating a
+                            portion of the Fibonacci sequence.
+                          \item Experimentally found the fastest clock frequency
+                            at which the processor could operate.
+                        \end{itemize}
+                      }{Jan. - May '19}
+                      \vspace{-0.5cm}
+                    % \resumeSubsection
+                    %   Pipelined the stages, and designed overall processor,
+                    %   targeting Xilinx Artix-7 FPGA. The functionality of the
+                    %   design as a whole was tested by calculating a portion of
+                    %   the Fibonacci sequence.}{January - May '19}
+
                     \resumeSubsection
-                        {Pipelined MIPS Processor}{VHDL}
-                        {Created each stage of a MIPS processor, individually
-                        tested these stages. The processor was modeled and
-                        tested using VHDL and then implemented on to Basys 3
-                        FPGA. The processor was tested by calculating 10
-                        elements of the Fibonacci Sequence.}{January - May '19}
+                      {Small Scale Autonomous Race Car}{Embedded C}
+                      {
+                        \vspace{-0.3cm}
+                        \begin{itemize}
+                          \item Created firmware for small autonomous racing
+                            vehicle, controlled by ARM Cortex-M4
+                            microcontroller.
+                          \item Using Line scan camera, wrote PID and state
+                            based control system to quickly navigate a randomly
+                            designed track.
+                        \end{itemize}
+                    }{Aug. - Dec. '20}
+                    \vspace{-0.7cm}
+                    % \resumeSubsection
+                    %   {Small Scale Autonomous Race Car}{Embedded C}
+                    %   {Using a NXP/Freescale FRDM-K64 Embedded Development
+                    %   board, myself and a partner assembled and programmed an
+                    %   autonomous race car to compete in RIT's IDE Cup. Used
+                    %   embedded C to design to interface with a line scan
+                    %   camera to control motors and servos to quickly traverse
+                    %   a randomly designed track. }{August - December '20}
                     % \resumeSubsection
                     %     {Personal Homelab}{Server Hardware}
                     %     {For the last five years, I have maintained a personal
