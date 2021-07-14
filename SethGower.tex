@@ -1,330 +1,329 @@
 %!TEX TS-program = xelatex
 \documentclass[letterpaper, 11pt]{article}
-    %--------DEPENDENCIES--------
-        \usepackage{fontspec}
-        \usepackage{latexsym}
-        \usepackage[empty]{fullpage}
-        \usepackage{titlesec}
-        \usepackage{marvosym}
-        \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-        \usepackage{verbatim}
-        \usepackage{enumitem}
-        \usepackage{hyperref}
-        \usepackage{tabulary}
-        \usepackage{tabularx}
-        \usepackage{xspace}
-        \usepackage{enumitem}
-        \usepackage{amsmath}
-        \usepackage{multirow}
-        \usepackage[T1]{fontenc}
-        \usepackage[utf8]{inputenc}
-        \usepackage{amssymb}
-    %----------------------------
+%--------DEPENDENCIES--------
+\usepackage{fontspec}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabulary}
+\usepackage{tabularx}
+\usepackage{xspace}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+%----------------------------
 
-    \hypersetup{colorlinks=false,}
+\hypersetup{colorlinks=false,}
 
-    %----SECTION-FORMATTING-----
-        \titleformat{\section}{
-        \vspace{-10pt}\raggedright\large
-        }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
-
-
-    %---------------------------
-
-    %--------FONT-SETUP---------
-        \setmainfont[
-            Path = fonts/,
-            Extension =.ttf,
-            UprightFont = *-Regular,
-            ItalicFont = *-Italic,
-            BoldFont = *-Bold,
-            BoldItalicFont = *-BoldItalic,
-        ]{Roboto}
-        \newfontfamily\robotoLight[
-            Path = fonts/,
-            Extension =.ttf,
-            UprightFont = *-Regular,
-            ItalicFont = *-Italic,
-        ]{RobotoLight}
-        \newfontfamily\robotoMed[
-            Path = fonts/,
-            Extension =.ttf,
-            UprightFont = *-Regular,
-            ItalicFont = *-Italic,
-        ]{RobotoMedium}
-        \newfontfamily\robotoThin[
-            Path = fonts/,
-            Extension =.ttf,
-            UprightFont = *-Regular,
-            ItalicFont = *-Italic,
-        ]{RobotoThin}
-    %---------------------------
-
-    %----------MARGINS----------
-        \addtolength{\oddsidemargin}{-0.5in}
-        \addtolength{\evensidemargin}{-0.375in}
-        \addtolength{\textwidth}{1in}
-        \addtolength{\topmargin}{-.75in}
-        \addtolength{\textheight}{1.0in}
-    %---------------------------
-
-    %--------NEW-COMMANDS-------
-        %Creates tab command that tabs the text over the argument amount
-            \newcommand{\tab}{\hspace*{.3cm}}
-        %Accents Subsection Headings and List Item Titles
-            \renewcommand{\accent}[1]{\textbf{\textcolor{MidnightBlue}{#1}}}
-        % Column Type for Ragged Left
-            \newcolumntype{L}{>{\raggedleft\arraybackslash}X}
-            \newcolumntype{R}{>{\raggedright\arraybackslash}X}
-        %Resume Subsection-Takes 5 Arguments [optional:link]{Title}{Location}{Description}{Duration}
-            \newcommand{\resumeSubsection}[5][]{
-                \item[]
-                    \begin{tabularx}{1\textwidth}{p{5.5in}L}
-                        \accent{#2}\hspace{.25cm}\footnotesize\robotoLight{\href{https://#1}{#1}} & \mbox{#3} \\
-                        \small\robotoLight{#4} & \robotoLight{\mbox{#5}}
-                    \end{tabularx}
-            }
-        %Project Items-Takes 4 arguments {Title}{Language}{github}{Description}
-            \newcommand{\project}[5]{
-                    \item[]
-                        \begin{tabularx}{1\textwidth}{p{2.1in}p{3.2in}L}
-                            \accent{\mbox{#1}} & &  \mbox{#2}\\
-                            \footnotesize\robotoThin{\href{https://#3}{#3}} & \small\robotoLight{#4} & \mbox{\robotoThin{#5}}\\
-                        \end{tabularx}
-            }
-        %Resume Listed Item-Takes 2 arguments {Title}{Description}
-            \newcommand{\resumeItem}[2]{\item{\accent{#1}: \robotoLight{#2}}}
-        %Commands for List Environment
-            \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-            \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+%----SECTION-FORMATTING-----
+\titleformat{\section}{
+\vspace{-10pt}\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 
-    %---------------------------
+%---------------------------
 
-    \setlist{nosep}
-    \begin{document}
-        %------------HEADER---------
-            \begin{center}
-              \begin{minipage}{0.33\textwidth}
-                \accent{\huge{Seth Gower}} \\
-                US Citizen
-              \end{minipage}
-              \begin{minipage}[b]{0.33\textwidth}
-                \centering
-                \href{mailto:sdg7234@rit.edu}{sdg7234@rit.edu}\\
-                (757) 553-0576
-              \end{minipage}
-              \begin{minipage}[b]{0.33\textwidth}
-                \raggedleft
-                \href{https://github.com/sethgower}{github.com/SethGower} \\
-                \href{https://sethgower.com}{sethgower.com}
-              \end{minipage}
-            \end{center}
-            \robotoMed\ Seeking full time employment developing VHDL for FPGA
-            applications, Starting June 2022.
-        %---------------------------
+%--------FONT-SETUP---------
+\setmainfont[
+  Path = fonts/,
+  Extension =.ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+]{Roboto}
+\newfontfamily\robotoLight[
+  Path = fonts/,
+  Extension =.ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+]{RobotoLight}
+\newfontfamily\robotoMed[
+  Path = fonts/,
+  Extension =.ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+]{RobotoMedium}
+\newfontfamily\robotoThin[
+  Path = fonts/,
+  Extension =.ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+]{RobotoThin}
+%---------------------------
 
-        %------WORK-EXP-------------
-            \section{Work Experience}
-                \resumeSubHeadingListStart
-                \resumeSubsection{\href{https://herricktechlabs.com}{Herrick
-                  Technology Laboratories}: DSP Engineering Intern}{Germantown,
-                  MD}{
-                  \vspace{-0.3cm}
-                  \begin{itemize}
-                    \item Developed high performance VHDL designs on FPGA based
-                      SDRs.
-                    \item Worked with High Speed Interfaces for SDR applications,
-                      including 10GbE and 40GbE.
-                    \item Performed well in a fast paced environment, while
-                      meeting deadlines on products for customers.
-                    \item Validated VHDL designs using Matlab and ModelSim.
-                    \item Developed FPGA designs with multiple, asynchronous
-                      clock domains.
-                  \end{itemize}
-                }{Feb. '21 - Present}
-                \vspace{-0.5cm}
+%----------MARGINS----------
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.0in}
+%---------------------------
 
-                \resumeSubsection{\href{https://d3engineering.com}{D3
-                  Engineering}: Embedded Software Engineering Intern}{Rochester, NY} {
-                  \vspace{-0.3cm}
-                  \begin{itemize}
-                    \item Development of Embedded software for Advanced Driver
-                      Assistance Systems (ADAS) applications, using Texas
-                      Instruments TDA processors. These systems included safety
-                      systems, such as Surround View.
-                    \item Designed and developed an automated testing suite for
-                      a new product. These tests were performed on all new units
-                      of this product to ensure functionality.
-                    \item Demonstrated ability to productively work in a remote
-                      capacity due to the COVID-19 pandemic.
-                  \end{itemize}
-                }{Jan. - Jul. '20}
-                \vspace{-0.5cm}
-
-                % \resumeSubsection{\href{https://idtech.com}{iD Tech Camps}:
-                %   Lead Instructor}{Multiple Locations} {
-                %   \vspace{-0.3cm}
-                %   \textit{iD Tech Camps:
-                %   William and Mary, PayPal Timonium, and American University}
-                %   \begin{itemize}
-                %     \item Taught technical camp classes to children ranging from
-                %       7-17
-                %     \item As lead instructor, managed and assisted other staff
-                %       members. Mentored new staff.
-                %   \end{itemize}
-                % }{June - August '18, '19}
-                % \vspace{-0.5cm}
-                \resumeSubsection{\href{https://www.rit.edu/engineering/department-computer-engineering}
-                  {RIT Computer Engineering Department}: Teaching Assistant}{Rochester, NY}
-                  {
-                    \vspace{-0.3cm}
-                    \begin{itemize}
-                      \item Assisted Professors with running Laboratory sections
-                        for various courses.
-                      \item Mentored Students, and helped them learn challenging
-                        concepts.
-                      \item Promptly graded student work, on top of course load.
-                    \end{itemize}
-                }{Aug. '18 - Dec. '20}
-                \vspace{-0.7cm}
-                \resumeSubHeadingListEnd
-        %---------------------------
-        %--------EDUCATION----------
-            \section{Education}
-                \resumeSubHeadingListStart
-                    \resumeSubsection
-                        {Rochester Institute of Technology}{Rochester, NY}
-                        {Bachelor of Science: Computer Engineering \newline
-                        GPA: 3.11 -
-                    \href{https://meritpages.com/sethgower}{Dean's List}: Spring
-                '19, Fall '20
-                \newline Relevant Coursework:
-                \begin{itemize}
-                    \resumeItem{Reconfigurable Computing (CMPE-660)}{Learned
-                      Advanced Synchronous Digital Design concepts targeting a
-                      Xilinx Artix-7 FPGA using Xilinx Vivado Suite. Designed
-                      Asynchronous interfaces, including PS/2 and UART.}
-                    \resumeItem{Interfacing Digital Electronics (CMPE-460)}
-                      {Used ARM Cortex-M4 board to interface with peripherals,
-                      to build and program an autonomous race car.}
-                    % \resumeItem {Digital Signal Processing (CMPE-480)}{Studied
-                    %     mathematical analysis of digital signals, and how to
-                    %     represent.}
-                    % \resumeItem {Intro to Software Engineering
-                    %     (SWEN-261)}{Developed and practiced the ability to work
-                    %     in a team with other software developers, in an Agile
-                    %     work environment.}
-                \end{itemize}}{Expected May '22}
-                \resumeSubHeadingListEnd
-        %---------------------------
-
-    %------SKILLS---------------
-            \vspace{-0.7cm}
-            \section{Skills}
-                \resumeSubHeadingListStart
-                    \resumeItem{Languages}{VHDL, Matlab, C, Arm Assembly, Python,
-                    \LaTeX\xspace, Bash, C++, Qt5, Java, Rust}
-                    \resumeItem{Tools}{GNU/Linux tools and environment, Git,
-                    KiCad, Altera Quartus Suite, ModelSim, Xilinx Vivado}
-                    \resumeItem{Hardware}{FPGA Design targeting Artix-7 and
-                    Stratix-10. Clock Domain crossing.}
-                    \resumeItem{Professional Skills}{Public Speaking, Team
-                    Management, Ability to Work productively in a remote
-                    capacity}
-                \resumeSubHeadingListEnd
-        %---------------------------
+%--------NEW-COMMANDS-------
+%Creates tab command that tabs the text over the argument amount
+  \newcommand{\tab}{\hspace*{.3cm}}
+%Accents Subsection Headings and List Item Titles
+  \renewcommand{\accent}[1]{\textbf{\textcolor{MidnightBlue}{#1}}}
+% Column Type for Ragged Left
+  \newcolumntype{L}{>{\raggedleft\arraybackslash}X}
+  \newcolumntype{R}{>{\raggedright\arraybackslash}X}
+%Resume Subsection-Takes 5 Arguments [optional:link]{Title}{Location}{Description}{Duration}
+  \newcommand{\resumeSubsection}[5][]{
+    \item[]
+      \begin{tabularx}{1\textwidth}{p{5.5in}L}
+        \accent{#2}\hspace{.25cm}\footnotesize\robotoLight{\href{https://#1}{#1}} & \mbox{#3} \\
+        \small\robotoLight{#4} & \robotoLight{\mbox{#5}}
+      \end{tabularx}
+  }
+%Project Items-Takes 4 arguments {Title}{Language}{github}{Description}
+  \newcommand{\project}[5]{
+      \item[]
+        \begin{tabularx}{1\textwidth}{p{2.1in}p{3.2in}L}
+          \accent{\mbox{#1}} & &  \mbox{#2}\\
+          \footnotesize\robotoThin{\href{https://#3}{#3}} & \small\robotoLight{#4} & \mbox{\robotoThin{#5}}\\
+        \end{tabularx}
+  }
+%Resume Listed Item-Takes 2 arguments {Title}{Description}
+  \newcommand{\resumeItem}[2]{\item{\accent{#1}: \robotoLight{#2}}}
+%Commands for List Environment
+  \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+  \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 
-        %-------PROJECTS------------
-            \section{Projects}
-                \resumeSubHeadingListStart
-                    \resumeSubsection
-                      {Pipelined MIPS Processor}{VHDL}
-                      {
-                        \vspace{-0.3cm}
-                        \begin{itemize}
-                          \item Created and tested each stage of a MIPS
-                            processor
-                          \item Combined each stage in the pipeline, targeting
-                            Xilinx Artix-7.
-                          \item Tested overall functionality by calculating a
-                            portion of the Fibonacci sequence.
-                          \item Experimentally found the fastest clock frequency
-                            at which the processor could operate.
-                        \end{itemize}
-                      }{Jan. - May '19}
-                      \vspace{-0.5cm}
-                    % \resumeSubsection
-                    %   Pipelined the stages, and designed overall processor,
-                    %   targeting Xilinx Artix-7 FPGA. The functionality of the
-                    %   design as a whole was tested by calculating a portion of
-                    %   the Fibonacci sequence.}{January - May '19}
+  %---------------------------
 
-                    \resumeSubsection
-                      {Small Scale Autonomous Race Car}{Embedded C}
-                      {
-                        \vspace{-0.3cm}
-                        \begin{itemize}
-                          \item Created firmware for small autonomous racing
-                            vehicle, controlled by ARM Cortex-M4
-                            microcontroller.
-                          \item Using Line scan camera, wrote PID and state
-                            based control system to quickly navigate a randomly
-                            designed track.
-                        \end{itemize}
-                    }{Aug. - Dec. '20}
-                    \vspace{-0.7cm}
-                    % \resumeSubsection
-                    %   {Small Scale Autonomous Race Car}{Embedded C}
-                    %   {Using a NXP/Freescale FRDM-K64 Embedded Development
-                    %   board, myself and a partner assembled and programmed an
-                    %   autonomous race car to compete in RIT's IDE Cup. Used
-                    %   embedded C to design to interface with a line scan
-                    %   camera to control motors and servos to quickly traverse
-                    %   a randomly designed track. }{August - December '20}
-                    % \resumeSubsection
-                    %     {Personal Homelab}{Server Hardware}
-                    %     {For the last five years, I have maintained a personal
-                    %     homelab of server hardware. This homelab is used to
-                    %     learn about various server hardware and services, including
-                    %     Proxmox, Docker and PFSense.}{July 2017 - Present}
+\setlist{nosep}
+\begin{document}
+%------------HEADER---------
+\begin{center}
+	\begin{minipage}{0.33\textwidth}
+		\accent{\huge{Seth Gower}} \\
+		US Citizen
+	\end{minipage}
+	\begin{minipage}[b]{0.33\textwidth}
+		\centering
+		\href{mailto:sdg7234@rit.edu}{sdg7234@rit.edu}\\
+		(757) 553-0576
+	\end{minipage}
+	\begin{minipage}[b]{0.33\textwidth}
+		\raggedleft
+		\href{https://github.com/sethgower}{github.com/SethGower} \\
+		\href{https://sethgower.com}{sethgower.com}
+	\end{minipage}
+\end{center}
+\robotoMed\ Seeking full time employment developing VHDL for FPGA
+applications, Starting June 2022.
+%---------------------------
 
-                        % \resumeSubsection[github.com/SethGower/haC64]}
-                    %     {haC64}{VHDL}
-                    %     {BrickHack V project. Myself and a partner worked to
-                    %     emulate the Commodore 64's processor, the 6510. This
-                    %     project is still in progress, after the processor is
-                    %     complete, the Video Controller will be modeled.}{February
-                    %     '19-Present}
-                    \resumeSubHeadingListEnd
-        %---------------------------
+%------WORK-EXP-------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+\resumeSubsection{\href{https://herricktechlabs.com}{Herrick
+		Technology Laboratories}: DSP Engineering Intern}{Germantown,
+	MD}{
+	\vspace{-0.3cm}
+	\begin{itemize}
+		\item Developed high performance VHDL designs on FPGA based
+		      SDRs.
+		\item Worked with High Speed Interfaces for SDR applications,
+		      including 10GbE and 40GbE.
+		\item Performed well in a fast paced environment, while
+		      meeting deadlines on products for customers.
+		\item Validated VHDL designs using Matlab and ModelSim.
+		\item Developed FPGA designs with multiple, asynchronous
+		      clock domains.
+	\end{itemize}
+}{Feb. '21 - Present}
+\vspace{-0.5cm}
+
+\resumeSubsection{\href{https://d3engineering.com}{D3
+		Engineering}: Embedded Software Engineering Intern}{Rochester, NY} {
+	\vspace{-0.3cm}
+	\begin{itemize}
+		\item Development of Embedded software for Advanced Driver
+		      Assistance Systems (ADAS) applications, using Texas
+		      Instruments TDA processors. These systems included safety
+		      systems, such as Surround View.
+		\item Designed and developed an automated testing suite for
+		      a new product. These tests were performed on all new units
+		      of this product to ensure functionality.
+		\item Demonstrated ability to productively work in a remote
+		      capacity due to the COVID-19 pandemic.
+	\end{itemize}
+}{Jan. - Jul. '20}
+\vspace{-0.5cm}
+
+% \resumeSubsection{\href{https://idtech.com}{iD Tech Camps}:
+%   Lead Instructor}{Multiple Locations} {
+%   \vspace{-0.3cm}
+%   \textit{iD Tech Camps:
+%   William and Mary, PayPal Timonium, and American University}
+%   \begin{itemize}
+%   \item Taught technical camp classes to children ranging from
+%     7-17
+%   \item As lead instructor, managed and assisted other staff
+%     members. Mentored new staff.
+%   \end{itemize}
+% }{June - August '18, '19}
+% \vspace{-0.5cm}
+\resumeSubsection{\href{https://www.rit.edu/engineering/department-computer-engineering}
+	{RIT Computer Engineering Department}: Teaching Assistant}{Rochester, NY}
+{
+	\vspace{-0.3cm}
+	\begin{itemize}
+		\item Assisted Professors with running Laboratory sections
+		      for various courses.
+		\item Mentored Students, and helped them learn challenging
+		      concepts.
+		\item Promptly graded student work, on top of course load.
+	\end{itemize}
+}{Aug. '18 - Dec. '20}
+\vspace{-0.7cm}
+\resumeSubHeadingListEnd
+%---------------------------
+%--------EDUCATION----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubsection
+{Rochester Institute of Technology}{Rochester, NY}
+{Bachelor of Science: Computer Engineering \newline
+	GPA: 3.11 -
+	\href{https://meritpages.com/sethgower}{Dean's List}: Spring
+	'19, Fall '20
+	\newline Relevant Coursework:
+	\begin{itemize}
+		\resumeItem{Reconfigurable Computing (CMPE-660)}{Learned
+			Advanced Synchronous Digital Design concepts targeting a
+			Xilinx Artix-7 FPGA using Xilinx Vivado Suite. Designed
+			Asynchronous interfaces, including PS/2 and UART.}
+		\resumeItem{Interfacing Digital Electronics (CMPE-460)}
+		{Used ARM Cortex-M4 board to interface with peripherals,
+			to build and program an autonomous race car.}
+		% \resumeItem {Digital Signal Processing (CMPE-480)}{Studied
+		%   mathematical analysis of digital signals, and how to
+		%   represent.}
+		% \resumeItem {Intro to Software Engineering
+		%   (SWEN-261)}{Developed and practiced the ability to work
+		%   in a team with other software developers, in an Agile
+		%   work environment.}
+	\end{itemize}}{Expected May '22}
+\resumeSubHeadingListEnd
+%---------------------------
+
+%------SKILLS---------------
+\vspace{-0.7cm}
+\section{Skills}
+\resumeSubHeadingListStart
+\resumeItem{Languages}{VHDL, Matlab, C, Arm Assembly, Python,
+	\LaTeX\xspace, Bash, C++, Qt5, Java, Rust}
+\resumeItem{Tools}{GNU/Linux tools and environment, Git,
+	KiCad, Altera Quartus Suite, ModelSim, Xilinx Vivado}
+\resumeItem{Hardware}{FPGA Design targeting Artix-7 and
+	Stratix-10. Clock Domain crossing.}
+\resumeItem{Professional Skills}{Public Speaking, Team
+	Management, Ability to Work productively in a remote
+	capacity}
+\resumeSubHeadingListEnd
+%---------------------------
 
 
-    %-----Organizations---------
-            \section{Organizations}
-                \resumeSubHeadingListStart
-                \resumeItem{Engineering House}{Special Interest House at RIT.
-                Positions Held: Secretary. Active October '17 - May '19}
-                \resumeItem{Computer Science House}{Special Interest House at
-                RIT. Active August '17 - May '18}
-                % \resumeItem{CodeRIT}{RIT's Hackathon Club. I assisted in
-                % planning BrickHack 2019}
-                    % \resumeSubsection[ehouse.rit.edu]
-                    %     {Engineering House}{Rochester, NY}
-                    %     {\textit{Positions Held: Secretary}\newline Engineering
-                    %     House is a social floor with an academic interest.
-                    %     EHouse is a place where students gather to learn and
-                    %     socialize through project based learning and mentor-mentee
-                    %     relationships. Active Member October '17 - May '19}{October '17--Present}
-                    % \resumeSubsection[csh.rit.edu]
-                    %     {Computer Science House}{Rochester, NY}{Computer
-                    %     Science House is a Special Interest House at RIT, that
-                    %     focuses on working on projects and improving learning and
-                    %     college life by surrounding members with like-minded
-                    %     people. Active Member from August '17 - May '18.}
-                    %     {August '17--Present}
-        \resumeSubHeadingListEnd
-        %---------------------------
-    \end{document}
+%-------PROJECTS------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubsection
+{Pipelined MIPS Processor}{VHDL}
+{
+	\vspace{-0.3cm}
+	\begin{itemize}
+		\item Created and tested each stage of a MIPS
+		      processor
+		\item Combined each stage in the pipeline, targeting
+		      Xilinx Artix-7.
+		\item Tested overall functionality by calculating a
+		      portion of the Fibonacci sequence.
+		\item Experimentally found the fastest clock frequency
+		      at which the processor could operate.
+	\end{itemize}
+}{Jan. - May '19}
+\vspace{-0.5cm}
+% \resumeSubsection
+%   Pipelined the stages, and designed overall processor,
+%   targeting Xilinx Artix-7 FPGA. The functionality of the
+%   design as a whole was tested by calculating a portion of
+%   the Fibonacci sequence.}{January - May '19}
 
+\resumeSubsection
+{Small Scale Autonomous Race Car}{Embedded C}
+{
+	\vspace{-0.3cm}
+	\begin{itemize}
+		\item Created firmware for small autonomous racing
+		      vehicle, controlled by ARM Cortex-M4
+		      microcontroller.
+		\item Using Line scan camera, wrote PID and state
+		      based control system to quickly navigate a randomly
+		      designed track.
+	\end{itemize}
+}{Aug. - Dec. '20}
+\vspace{-0.7cm}
+% \resumeSubsection
+%   {Small Scale Autonomous Race Car}{Embedded C}
+%   {Using a NXP/Freescale FRDM-K64 Embedded Development
+%   board, myself and a partner assembled and programmed an
+%   autonomous race car to compete in RIT's IDE Cup. Used
+%   embedded C to design to interface with a line scan
+%   camera to control motors and servos to quickly traverse
+%   a randomly designed track. }{August - December '20}
+% \resumeSubsection
+%   {Personal Homelab}{Server Hardware}
+%   {For the last five years, I have maintained a personal
+%   homelab of server hardware. This homelab is used to
+%   learn about various server hardware and services, including
+%   Proxmox, Docker and PFSense.}{July 2017 - Present}
+
+% \resumeSubsection[github.com/SethGower/haC64]}
+%   {haC64}{VHDL}
+%   {BrickHack V project. Myself and a partner worked to
+%   emulate the Commodore 64's processor, the 6510. This
+%   project is still in progress, after the processor is
+%   complete, the Video Controller will be modeled.}{February
+%   '19-Present}
+\resumeSubHeadingListEnd
+%---------------------------
+
+
+%-----Organizations---------
+\section{Organizations}
+\resumeSubHeadingListStart
+\resumeItem{Engineering House}{Special Interest House at RIT.
+	Positions Held: Secretary. Active October '17 - May '19}
+\resumeItem{Computer Science House}{Special Interest House at
+	RIT. Active August '17 - May '18}
+% \resumeItem{CodeRIT}{RIT's Hackathon Club. I assisted in
+% planning BrickHack 2019}
+% \resumeSubsection[ehouse.rit.edu]
+%   {Engineering House}{Rochester, NY}
+%   {\textit{Positions Held: Secretary}\newline Engineering
+%   House is a social floor with an academic interest.
+%   EHouse is a place where students gather to learn and
+%   socialize through project based learning and mentor-mentee
+%   relationships. Active Member October '17 - May '19}{October '17--Present}
+% \resumeSubsection[csh.rit.edu]
+%   {Computer Science House}{Rochester, NY}{Computer
+%   Science House is a Special Interest House at RIT, that
+%   focuses on working on projects and improving learning and
+%   college life by surrounding members with like-minded
+%   people. Active Member from August '17 - May '18.}
+%   {August '17--Present}
+\resumeSubHeadingListEnd
+%---------------------------
+\end{document}
